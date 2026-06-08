@@ -1,0 +1,113 @@
+# OPERATORS PROGRAMS
+
+while True:
+
+    print("\n--- MENU ---")
+    print("1. Average of 3 Numbers")
+    print("2. Area of Circle, Square and Triangle")
+    print("3. Centigrade to Fahrenheit")
+    print("4. Fahrenheit to Centigrade")
+    print("5. Simple Interest")
+    print("6. Compound Interest")
+    print("7. Swap Two Numbers Using Temporary Variable")
+    print("8. Swap Two Numbers Without Temporary Variable")
+    print("9. Square Root of a Number")
+    print("10. Last Digit of a Number")
+    print("11. Exit")
+
+    ch = int(input("Enter Choice: "))
+
+    # Average of 3 Numbers
+    if ch == 1:
+        a = int(input("Enter first number: "))
+        b = int(input("Enter second number: "))
+        c = int(input("Enter third number: "))
+        avg = (a + b + c) / 3
+        print("Average =", avg)
+
+    # Area of Circle, Square and Triangle
+    elif ch == 2:
+        r = float(input("Enter radius: "))
+        area_circle = 3.14 * r * r
+        print("Area of Circle =", area_circle)
+
+        s = float(input("Enter side of square: "))
+        area_square = s * s
+        print("Area of Square =", area_square)
+
+        b = float(input("Enter base: "))
+        h = float(input("Enter height: "))
+        area_triangle = 0.5 * b * h
+        print("Area of Triangle =", area_triangle)
+
+    # Centigrade to Fahrenheit
+    elif ch == 3:
+        c = float(input("Enter temperature in Celsius: "))
+        f = (c * 9/5) + 32
+        print("Fahrenheit =", f)
+
+    # Fahrenheit to Centigrade
+    elif ch == 4:
+        f = float(input("Enter temperature in Fahrenheit: "))
+        c = (f - 32) * 5/9
+        print("Centigrade =", c)
+
+    # Simple Interest
+    elif ch == 5:
+        p = float(input("Enter Principal: "))
+        r = float(input("Enter Rate: "))
+        t = float(input("Enter Time: "))
+        si = (p * r * t) / 100
+        print("Simple Interest =", si)
+
+    # Compound Interest
+    elif ch == 6:
+        p = float(input("Enter Principal: "))
+        r = float(input("Enter Rate: "))
+        t = float(input("Enter Time: "))
+        amount = p * (1 + r/100) ** t
+        ci = amount - p
+        print("Compound Interest =", ci)
+
+    # Swap Using Temporary Variable
+    elif ch == 7:
+        a = int(input("Enter first number: "))
+        b = int(input("Enter second number: "))
+
+        temp = a
+        a = b
+        b = temp
+
+        print("After Swapping")
+        print("a =", a)
+        print("b =", b)
+
+    # Swap Without Temporary Variable
+    elif ch == 8:
+        a = int(input("Enter first number: "))
+        b = int(input("Enter second number: "))
+
+        a, b = b, a
+
+        print("After Swapping")
+        print("a =", a)
+        print("b =", b)
+
+    # Square Root of a Number
+    elif ch == 9:
+        n = float(input("Enter number: "))
+        root = n ** 0.5
+        print("Square Root =", root)
+
+    # Last Digit of a Number
+    elif ch == 10:
+        n = int(input("Enter number: "))
+        print("Last Digit =", n % 10)
+
+    # Exit
+    elif ch == 11:
+        print("Program Ended")
+        break
+
+    else:
+        print("Invalid Choice")
