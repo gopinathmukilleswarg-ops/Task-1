@@ -1,0 +1,202 @@
+# CONDITIONS PROGRAMS
+
+while True:
+
+    print("\n----- MENU -----")
+    print("1. Quotient and Remainder")
+    print("2. Grade Calculation")
+    print("3. Positive/Negative, Odd/Even, Pass/Fail, Leap Year")
+    print("4. Vowel or Consonant")
+    print("5. Maximum and Minimum of Three Numbers")
+    print("6. Season of Month")
+    print("7. Number of Days in a Month")
+    print("8. Hello or Bye")
+    print("9. Water Boiling Check")
+    print("10. Library Fine")
+    print("11. Police Eligibility")
+    print("12. Employee Bonus")
+    print("13. Electricity Bill")
+    print("14. Password Validation")
+    print("15. Exit")
+
+    ch = int(input("Enter Choice: "))
+
+    # Quotient and Remainder
+    if ch == 1:
+        m = int(input("Enter m: "))
+        n = int(input("Enter n: "))
+        print("Quotient =", m // n)
+        print("Remainder =", m % n)
+
+    # Grade Calculation
+    elif ch == 2:
+        total = 0
+        for i in range(5):
+            mark = int(input("Enter mark: "))
+            total += mark
+
+        avg = total / 5
+
+        if avg >= 90:
+            print("Grade A")
+        elif avg >= 75:
+            print("Grade B")
+        elif avg >= 50:
+            print("Grade C")
+        else:
+            print("Fail")
+
+    # Positive/Negative, Odd/Even, Pass/Fail, Leap Year
+    elif ch == 3:
+        n = int(input("Enter number: "))
+
+        if n > 0:
+            print("Positive")
+        elif n < 0:
+            print("Negative")
+        else:
+            print("Zero")
+
+        if n % 2 == 0:
+            print("Even")
+        else:
+            print("Odd")
+
+        mark = int(input("Enter mark: "))
+        if mark >= 40:
+            print("Pass")
+        else:
+            print("Fail")
+
+        year = int(input("Enter year: "))
+        if (year % 400 == 0) or (year % 4 == 0 and year % 100 != 0):
+            print("Leap Year")
+        else:
+            print("Not Leap Year")
+
+    # Vowel or Consonant
+    elif ch == 4:
+        ch1 = input("Enter alphabet: ").lower()
+
+        if ch1 in "aeiou":
+            print("Vowel")
+        else:
+            print("Consonant")
+
+    # Maximum and Minimum of Three Numbers
+    elif ch == 5:
+        a = int(input("Enter a: "))
+        b = int(input("Enter b: "))
+        c = int(input("Enter c: "))
+
+        print("Maximum =", max(a, b, c))
+        print("Minimum =", min(a, b, c))
+
+    # Season of Month
+    elif ch == 6:
+        month = int(input("Enter month (1-12): "))
+
+        if month in [12, 1, 2]:
+            print("Winter")
+        elif month in [3, 4, 5]:
+            print("Summer")
+        elif month in [6, 7, 8]:
+            print("Monsoon")
+        else:
+            print("Autumn")
+
+    # Number of Days in a Month
+    elif ch == 7:
+        month = int(input("Enter month: "))
+
+        if month == 2:
+            print("28 or 29 Days")
+        elif month in [4, 6, 9, 11]:
+            print("30 Days")
+        else:
+            print("31 Days")
+
+    # Hello or Bye
+    elif ch == 8:
+        n = int(input("Enter number: "))
+
+        if n % 5 == 0:
+            print("Hello")
+        else:
+            print("Bye")
+
+    # Water Boiling Check
+    elif ch == 9:
+        temp = float(input("Enter temperature: "))
+
+        if temp >= 100:
+            print("Water is Boiling")
+        else:
+            print("Water is Not Boiling")
+
+    # Library Fine
+    elif ch == 10:
+        days = int(input("Enter days: "))
+
+        if days <= 5:
+            fine = days * 2
+        elif days <= 10:
+            fine = days * 3
+        elif days <= 15:
+            fine = days * 4
+        else:
+            fine = days * 5
+
+        print("Fine =", fine)
+
+    # Police Eligibility
+    elif ch == 11:
+        age = int(input("Enter age: "))
+        height = float(input("Enter height in cm: "))
+
+        if age >= 18 and age <= 30 and height >= 165:
+            print("Eligible")
+        else:
+            print("Not Eligible")
+
+    # Employee Bonus
+    elif ch == 12:
+        salary = float(input("Enter salary: "))
+        years = int(input("Enter years of service: "))
+
+        if years > 5:
+            bonus = salary * 0.10
+        else:
+            bonus = salary * 0.05
+
+        print("Bonus =", bonus)
+
+    # Electricity Bill
+    elif ch == 13:
+        units = int(input("Enter units: "))
+
+        if units <= 100:
+            bill = units * 1.5
+        elif units <= 200:
+            bill = units * 2
+        else:
+            bill = units * 3
+
+        print("Bill Amount =", bill)
+
+    # Password Validation
+    elif ch == 14:
+        pwd = input("Enter password: ")
+
+        if len(pwd) >= 8:
+            print("Valid Password")
+        else:
+            print("Invalid Password")
+
+    # Exit
+    elif ch == 15:
+        print("Program Ended")
+        break
+
+    else:
+        print("Invalid Choice")
