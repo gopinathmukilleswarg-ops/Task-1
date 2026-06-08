@@ -1,0 +1,181 @@
+while True:
+
+    print("\n----- PYTHON PROGRAM MENU -----")
+    print("1. Factorial")
+    print("2. First 10 Natural Numbers")
+    print("3. Sum of First 10 Natural Numbers")
+    print("4. Multiplication Table")
+    print("5. Fibonacci Series")
+    print("6. Palindrome Number")
+    print("7. Armstrong Number")
+    print("8. HCF of Two Numbers")
+    print("9. Hi Hello Program")
+    print("10. Prime Number Check")
+    print("11. Prime Numbers 0 to 100")
+    print("12. Positive Divisors")
+    print("13. Sum of First n Odd & Even Numbers")
+    print("14. Perfect Square Check")
+    print("15. Exit")
+
+    ch = int(input("Enter Choice: "))
+
+    # Factorial
+    if ch == 1:
+        n = int(input("Enter number: "))
+        fact = 1
+        for i in range(1, n + 1):
+            fact *= i
+        print("Factorial =", fact)
+
+    # First 10 Natural Numbers
+    elif ch == 2:
+        for i in range(1, 11):
+            print(i)
+
+    # Sum of First 10 Natural Numbers
+    elif ch == 3:
+        s = 0
+        for i in range(1, 11):
+            s += i
+        print("Sum =", s)
+
+    # Multiplication Table
+    elif ch == 4:
+        n = int(input("Enter number: "))
+        for i in range(1, 11):
+            print(n, "x", i, "=", n * i)
+
+    # Fibonacci Series
+    elif ch == 5:
+        n = int(input("Enter terms: "))
+        a, b = 0, 1
+        for i in range(n):
+            print(a, end=" ")
+            c = a + b
+            a = b
+            b = c
+        print()
+
+    # Palindrome Number
+    elif ch == 6:
+        n = int(input("Enter number: "))
+        temp = n
+        rev = 0
+
+        while n > 0:
+            rev = rev * 10 + n % 10
+            n //= 10
+
+        if temp == rev:
+            print("Palindrome")
+        else:
+            print("Not Palindrome")
+
+    # Armstrong Number
+    elif ch == 7:
+        n = int(input("Enter number: "))
+        temp = n
+        s = 0
+
+        while n > 0:
+            digit = n % 10
+            s += digit ** 3
+            n //= 10
+
+        if temp == s:
+            print("Armstrong")
+        else:
+            print("Not Armstrong")
+
+    # HCF of Two Numbers
+    elif ch == 8:
+        a = int(input("Enter first number: "))
+        b = int(input("Enter second number: "))
+
+        while b != 0:
+            a, b = b, a % b
+
+        print("HCF =", a)
+
+    # Hi Hello Program
+    elif ch == 9:
+        for i in range(1, 51):
+            if i % 3 == 0 and i % 5 == 0:
+                print("hihello")
+            elif i % 3 == 0:
+                print("hi")
+            elif i % 5 == 0:
+                print("hello")
+            else:
+                print(i)
+
+    # Prime Number Check
+    elif ch == 10:
+        n = int(input("Enter number: "))
+        count = 0
+
+        for i in range(1, n + 1):
+            if n % i == 0:
+                count += 1
+
+        if count == 2:
+            print("Prime")
+        else:
+            print("Not Prime")
+
+    # Prime Numbers Between 0 and 100
+    elif ch == 11:
+        count = 0
+
+        for n in range(2, 101):
+            prime = True
+
+            for i in range(2, n):
+                if n % i == 0:
+                    prime = False
+                    break
+
+            if prime:
+                print(n)
+                count += 1
+
+        print("Total Prime Numbers =", count)
+
+    # Positive Divisors of a Number
+    elif ch == 12:
+        n = int(input("Enter number: "))
+
+        for i in range(1, n + 1):
+            if n % i == 0:
+                print(i)
+
+    # Sum of First n Odd and Even Numbers
+    elif ch == 13:
+        n = int(input("Enter n: "))
+        even_sum = 0
+        odd_sum = 0
+
+        for i in range(1, n + 1):
+            even_sum += 2 * i
+            odd_sum += (2 * i - 1)
+
+        print("Even Sum =", even_sum)
+        print("Odd Sum =", odd_sum)
+
+    # Perfect Square Check
+    elif ch == 14:
+        n = int(input("Enter number: "))
+        root = int(n ** 0.5)
+
+        if root * root == n:
+            print("Perfect Square")
+        else:
+            print("Not Perfect Square")
+
+    # Exit
+    elif ch == 15:
+        print("Program Ended")
+        break
+
+    else:
+        print("Invalid Choice")
