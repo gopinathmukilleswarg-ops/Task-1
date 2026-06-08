@@ -1,0 +1,132 @@
+# PATTERN PROGRAMS
+
+while True:
+
+    print("\n----- PATTERN MENU -----")
+    print("1. Half Pyramid")
+    print("2. Inverted Half Pyramid")
+    print("3. Hollow Inverted Half Pyramid")
+    print("4. Full Pyramid")
+    print("5. Inverted Full Pyramid")
+    print("6. Hollow Full Pyramid")
+    print("7. Hollow Diamond")
+    print("8. Hollow Square")
+    print("9. Plus Pattern")
+    print("10. X Pattern")
+    print("11. Exit")
+
+    ch = int(input("Enter Choice: "))
+    n = 5
+
+    # Half Pyramid
+    if ch == 1:
+        print("\nHalf Pyramid")
+        for i in range(1, n + 1):
+            print("* " * i)
+
+    # Inverted Half Pyramid
+    elif ch == 2:
+        print("\nInverted Half Pyramid")
+        for i in range(n, 0, -1):
+            print("* " * i)
+
+    # Hollow Inverted Half Pyramid
+    elif ch == 3:
+        print("\nHollow Inverted Half Pyramid")
+        for i in range(n, 0, -1):
+            for j in range(1, i + 1):
+                if i == n or j == 1 or j == i:
+                    print("*", end=" ")
+                else:
+                    print(" ", end=" ")
+            print()
+
+    # Full Pyramid
+    elif ch == 4:
+        print("\nFull Pyramid")
+        for i in range(n):
+            print(" " * (n - i), end="")
+            print("* " * (i + 1))
+
+    # Inverted Full Pyramid
+    elif ch == 5:
+        print("\nInverted Full Pyramid")
+        for i in range(n, 0, -1):
+            print(" " * (n - i), end="")
+            print("* " * i)
+
+    # Hollow Full Pyramid
+    elif ch == 6:
+        print("\nHollow Full Pyramid")
+        for i in range(n):
+            for j in range(n - i):
+                print(" ", end="")
+            for j in range(2 * i + 1):
+                if j == 0 or j == 2 * i or i == n - 1:
+                    print("*", end="")
+                else:
+                    print(" ", end="")
+            print()
+
+    # Hollow Diamond
+    elif ch == 7:
+        print("\nHollow Diamond")
+
+        for i in range(n):
+            print(" " * (n - i), end="")
+            for j in range(2 * i + 1):
+                if j == 0 or j == 2 * i:
+                    print("*", end="")
+                else:
+                    print(" ", end="")
+            print()
+
+        for i in range(n - 2, -1, -1):
+            print(" " * (n - i), end="")
+            for j in range(2 * i + 1):
+                if j == 0 or j == 2 * i:
+                    print("*", end="")
+                else:
+                    print(" ", end="")
+            print()
+
+    # Hollow Square
+    elif ch == 8:
+        print("\nHollow Square")
+        for i in range(n):
+            for j in range(n):
+                if i == 0 or i == n-1 or j == 0 or j == n-1:
+                    print("*", end=" ")
+                else:
+                    print(" ", end=" ")
+            print()
+
+    # Plus Pattern
+    elif ch == 9:
+        print("\nPlus Pattern")
+        for i in range(n):
+            for j in range(n):
+                if i == n//2 or j == n//2:
+                    print("*", end=" ")
+                else:
+                    print(" ", end=" ")
+            print()
+
+    # X Pattern
+    elif ch == 10:
+        print("\nX Pattern")
+        for i in range(n):
+            for j in range(n):
+                if i == j or i + j == n - 1:
+                    print("*", end=" ")
+                else:
+                    print(" ", end=" ")
+            print()
+
+    # Exit
+    elif ch == 11:
+        print("Program Ended")
+        break
+
+    else:
+        print("Invalid Choice")
