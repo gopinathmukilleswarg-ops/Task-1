@@ -1,0 +1,161 @@
+s# 1. Palindrome
+if choice == 1:
+    String = input("Enter String : ")
+    temp = ""
+
+    for i in String:
+        temp = i + temp
+
+    if temp == String:
+        print("True")
+    else:
+        print("False")
+
+# 2. Count Vowels
+elif choice == 2:
+    String = input("Enter String : ")
+    count = 0
+
+    for i in String:
+        if i in "aeiouAEIOU":
+            count += 1
+
+    print("Vowels =", count)
+
+# 3. Reverse String
+elif choice == 3:
+    String = input("Enter String : ")
+    rev = ""
+
+    for i in String:
+        rev = i + rev
+
+    print(rev)
+
+# 4. Upper and Lower Count
+elif choice == 4:
+    String = input("Enter String : ")
+    upper = 0
+    lower = 0
+
+    for i in String:
+        if i.isupper():
+            upper += 1
+        elif i.islower():
+            lower += 1
+
+    print("Uppercase =", upper)
+    print("Lowercase =", lower)
+
+# 5. Remove Duplicates
+elif choice == 5:
+    String = input("Enter String : ")
+    temp = ""
+
+    for i in String:
+        if i not in temp:
+            temp += i
+
+    print(temp)
+
+# 6. Most Frequent Character
+elif choice == 6:
+    String = input("Enter String : ")
+
+    max_count = 0
+    freq_char = ""
+
+    for i in String:
+        count = 0
+
+        for j in String:
+            if i == j:
+                count += 1
+
+        if count > max_count:
+            max_count = count
+            freq_char = i
+
+    print("Most Frequent Character =", freq_char)
+
+# 7. Anagram
+elif choice == 7:
+    s1 = input("Enter First String : ")
+    s2 = input("Enter Second String : ")
+
+    if sorted(s1) == sorted(s2):
+        print("True")
+    else:
+        print("False")
+
+# 8. Remove Non-Alphabetic Characters
+elif choice == 8:
+    String = input("Enter String : ")
+    temp = ""
+
+    for i in String:
+        if i.isalpha():
+            temp += i
+
+    print(temp)
+
+# 9. Count Words
+elif choice == 9:
+    String = input("Enter String : ")
+
+    words = String.split()
+    print("Words =", len(words))
+
+# 10. Sum of Digits
+elif choice == 10:
+    String = input("Enter String : ")
+    total = 0
+
+    for i in String:
+        if i.isdigit():
+            total += int(i)
+
+    print("Sum =", total)
+
+# 11. Replace Spaces with Hyphens
+elif choice == 11:
+    String = input("Enter String : ")
+    print(String.replace(" ", "-"))
+
+# 12. Capitalize First Letter
+elif choice == 12:
+    String = input("Enter String : ")
+    print(String.title())
+
+# 13. Print Only Digits
+elif choice == 13:
+    String = input("Enter String : ")
+
+    for i in String:
+        if i.isdigit():
+            print(i, end="")
+
+# 14. Every Second Character
+elif choice == 14:
+    String = input("Enter String : ")
+    print(String[1::2])
+
+# 15. StartsWith and EndsWith
+elif choice == 15:
+    String = input("Enter String : ")
+
+    start = input("Enter Starting Word : ")
+    end = input("Enter Ending Word : ")
+
+    if String[:len(start)] == start:
+        print("Starts With =", True)
+    else:
+        print("Starts With =", False)
+
+    if String[-len(end):] == end:
+        print("Ends With =", True)
+    else:
+        print("Ends With =", False)
+
+else:
+    print("Invalid Choice")
