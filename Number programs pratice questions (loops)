@@ -1,0 +1,259 @@
+
+        // 1. Count Digits
+        case 1:
+            System.out.print("Enter Number: ");
+            int n1 = sc.nextInt();
+            int count = 0;
+            while(n1 > 0){
+                count++;
+                n1 /= 10;
+            }
+            System.out.println("Digits = " + count);
+            break;
+
+        // 2. Sum of Digits
+        case 2:
+            System.out.print("Enter Number: ");
+            int n2 = sc.nextInt();
+            int sum = 0;
+            while(n2 > 0){
+                sum += n2 % 10;
+                n2 /= 10;
+            }
+            System.out.println("Sum = " + sum);
+            break;
+
+        // 3. Product of Digits
+        case 3:
+            System.out.print("Enter Number: ");
+            int n3 = sc.nextInt();
+            int product = 1;
+            while(n3 > 0){
+                product *= n3 % 10;
+                n3 /= 10;
+            }
+            System.out.println("Product = " + product);
+            break;
+
+        // 4. Reverse Number
+        case 4:
+            System.out.print("Enter Number: ");
+            int n4 = sc.nextInt();
+            int rev = 0;
+            while(n4 > 0){
+                rev = rev * 10 + n4 % 10;
+                n4 /= 10;
+            }
+            System.out.println("Reverse = " + rev);
+            break;
+
+        // 5. Sum of Even and Odd Digits
+        case 5:
+            System.out.print("Enter Number: ");
+            int n5 = sc.nextInt();
+            int even = 0, odd = 0;
+            while(n5 > 0){
+                int d = n5 % 10;
+                if(d % 2 == 0)
+                    even += d;
+                else
+                    odd += d;
+                n5 /= 10;
+            }
+            System.out.println("Even Sum = " + even);
+            System.out.println("Odd Sum = " + odd);
+            break;
+
+        // 6. Count Prime Digits
+        case 6:
+            System.out.print("Enter Number: ");
+            int n6 = sc.nextInt();
+            int primeCount = 0;
+            while(n6 > 0){
+                int d = n6 % 10;
+                if(d==2 || d==3 || d==5 || d==7)
+                    primeCount++;
+                n6 /= 10;
+            }
+            System.out.println("Prime Digits = " + primeCount);
+            break;
+
+        // 8. Palindrome Number
+        case 8:
+            System.out.print("Enter Number: ");
+            int n8 = sc.nextInt();
+            int temp = n8, reverse = 0;
+            while(temp > 0){
+                reverse = reverse * 10 + temp % 10;
+                temp /= 10;
+            }
+            if(reverse == n8)
+                System.out.println("Palindrome");
+            else
+                System.out.println("Not Palindrome");
+            break;
+
+        // 9. Spy Number
+        case 9:
+            System.out.print("Enter Number: ");
+            int n9 = sc.nextInt();
+            int s = 0, p = 1;
+            while(n9 > 0){
+                int d = n9 % 10;
+                s += d;
+                p *= d;
+                n9 /= 10;
+            }
+            if(s == p)
+                System.out.println("Spy Number");
+            else
+                System.out.println("Not Spy Number");
+            break;
+
+        // 10. Special Number
+        case 10:
+            System.out.print("Enter Two Digit Number: ");
+            int n10 = sc.nextInt();
+            int a = n10 / 10;
+            int b = n10 % 10;
+            if((a+b)+(a*b)==n10)
+                System.out.println("Special Number");
+            else
+                System.out.println("Not Special");
+            break;
+
+        // 11. Harshad Number
+        case 11:
+            System.out.print("Enter Number: ");
+            int n11 = sc.nextInt();
+            int num = n11, digitSum = 0;
+            while(num > 0){
+                digitSum += num % 10;
+                num /= 10;
+            }
+            if(n11 % digitSum == 0)
+                System.out.println("Harshad Number");
+            else
+                System.out.println("Not Harshad");
+            break;
+
+        // 12. Neon Number
+        case 12:
+            System.out.print("Enter Number: ");
+            int n12 = sc.nextInt();
+            int sq = n12 * n12;
+            int sqsum = 0;
+            while(sq > 0){
+                sqsum += sq % 10;
+                sq /= 10;
+            }
+            if(sqsum == n12)
+                System.out.println("Neon Number");
+            else
+                System.out.println("Not Neon");
+            break;
+
+        // 13. Duck Number
+        case 13:
+            System.out.print("Enter Number: ");
+            String str = sc.next();
+            if(str.charAt(0)!='0' && str.contains("0"))
+                System.out.println("Duck Number");
+            else
+                System.out.println("Not Duck Number");
+            break;
+
+        // 14. Automorphic Number
+        case 14:
+            System.out.print("Enter Number: ");
+            int n14 = sc.nextInt();
+            int square = n14*n14;
+            if(String.valueOf(square).endsWith(String.valueOf(n14)))
+                System.out.println("Automorphic Number");
+            else
+                System.out.println("Not Automorphic");
+            break;
+
+        // 15. Armstrong Number
+        case 15:
+            System.out.print("Enter Number: ");
+            int n15 = sc.nextInt();
+            int temp15 = n15, arm = 0;
+            while(temp15 > 0){
+                int d = temp15 % 10;
+                arm += d*d*d;
+                temp15 /= 10;
+            }
+            if(arm == n15)
+                System.out.println("Armstrong Number");
+            else
+                System.out.println("Not Armstrong");
+            break;
+
+        // 16. Strong Number
+        case 16:
+            System.out.print("Enter Number: ");
+            int n16 = sc.nextInt();
+            int temp16 = n16, strong = 0;
+            while(temp16 > 0){
+                int d = temp16 % 10;
+                int fact = 1;
+                for(int i=1;i<=d;i++)
+                    fact *= i;
+                strong += fact;
+                temp16 /= 10;
+            }
+            if(strong == n16)
+                System.out.println("Strong Number");
+            else
+                System.out.println("Not Strong");
+            break;
+
+        // 17. Perfect Number
+        case 17:
+            System.out.print("Enter Number: ");
+            int n17 = sc.nextInt();
+            int psum = 0;
+            for(int i=1;i<n17;i++){
+                if(n17%i==0)
+                    psum += i;
+            }
+            if(psum==n17)
+                System.out.println("Perfect Number");
+            else
+                System.out.println("Not Perfect");
+            break;
+
+        // 21. Factorial
+        case 21:
+            System.out.print("Enter Number: ");
+            int n21 = sc.nextInt();
+            long fact = 1;
+            for(int i=1;i<=n21;i++)
+                fact *= i;
+            System.out.println("Factorial = " + fact);
+            break;
+
+        default:
+            System.out.println("Program not added.");
+        }
+
+        sc.close();
+    }
+}
+
+
+        // Reverse the number
+        while(n > 0) {
+            rev = rev * 10 + n % 10;
+            n = n / 10;
+        }
+
+        // Split digits and print square
+        while(rev > 0) {
+            int digit = rev % 10;
+            System.out.println(digit * digit);
+            rev = rev / 10;
+        }
+    }
+}
