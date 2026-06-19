@@ -1,0 +1,136 @@
+# 1. Sum of all items in a list
+lst = [10, 20, 30, 40]
+print("1.", sum(lst))
+
+# 2. Largest number
+print("2.", max(lst))
+
+# 3. Smallest number
+print("3.", min(lst))
+
+# 4. Remove duplicates
+lst = [1, 2, 2, 3, 4, 4]
+print("4.", list(set(lst)))
+
+# 5. Copy a list
+lst = [1, 2, 3]
+copy_lst = lst.copy()
+print("5.", copy_lst)
+
+# 6. Reverse a list
+lst = [1, 2, 3, 4]
+lst.reverse()
+print("6.", lst)
+
+# 7. Different data types
+lst = [10, "Hello", 3.5, True]
+print("7.", lst)
+
+# 8. Remove empty elements
+lst = [1, '', 2, '', 3]
+new_lst = [x for x in lst if x != '']
+print("8.", new_lst)
+
+# 9. Append second list to first
+a = [1, 2]
+b = [3, 4]
+a.extend(b)
+print("9.", a)
+
+# 10. Random item
+import random
+lst = [10, 20, 30, 40]
+print("10.", random.choice(lst))
+
+# 11. Odd and Even numbers
+lst = [1, 2, 3, 4, 5, 6]
+odd = [x for x in lst if x % 2 != 0]
+even = [x for x in lst if x % 2 == 0]
+print("11. Odd:", odd)
+print("11. Even:", even)
+
+# 12. Sort ascending
+lst = [5, 2, 8, 1]
+lst.sort()
+print("12.", lst)
+
+# 13. Sort descending
+lst.sort(reverse=True)
+print("13.", lst)
+
+# 14. Count elements
+print("14.", len(lst))
+
+# 15. Average
+lst = [10, 20, 30]
+avg = sum(lst) / len(lst)
+print("15.", avg)
+
+# 16. Count occurrence
+lst = [1, 2, 2, 3, 2]
+print("16.", lst.count(2))
+
+# 17. Check existence
+print("17.", 3 in lst)
+
+# 18. Insert element
+lst = [1, 2, 4]
+lst.insert(2, 3)
+print("18.", lst)
+
+# 19. Remove specific element
+lst.remove(3)
+print("19.", lst)
+
+# 20. Second largest number
+lst = [10, 50, 20, 40]
+lst.sort()
+print("20.", lst[-2])
+
+# 21. Merge two lists
+a = [1, 2]
+b = [3, 4]
+print("21.", a + b)
+
+# 22. Common elements
+a = [1, 2, 3, 4]
+b = [3, 4, 5, 6]
+print("22.", list(set(a) & set(b)))
+
+# 23. Positive numbers only
+lst = [-1, 2, -3, 4, 5]
+positive = [x for x in lst if x > 0]
+print("23.", positive)
+
+# 24. Replace negatives with 0
+lst = [-1, 2, -3, 4]
+new_lst = [0 if x < 0 else x for x in lst]
+print("24.", new_lst)
+
+# 25. Index of an element
+lst = [10, 20, 30, 40]
+print("25.", lst.index(30))
+
+# 26. Student names
+students = ["John", "Sam", "David", "Alex", "Peter"]
+print("26.")
+for s in students:
+    print(s)
+
+# 27. Highest and lowest marks
+marks = [78, 85, 90, 65, 88, 92, 70, 81, 95, 60]
+print("27. Highest:", max(marks))
+print("27. Lowest:", min(marks))
+
+# 28. Total bill amount
+prices = [100, 250, 300, 150]
+print("28. Total Bill:", sum(prices))
+
+# 29. Salaries greater than 25000
+salaries = [20000, 30000, 45000, 18000, 27000]
+high_salary = [x for x in salaries if x > 25000]
+print("29.", high_salary)
+
+# 30. Count present students
+attendance = ["Present", "Absent", "Present", "Present", "Absent"]
+print("30. Present Count:", attendance.count("Present"))
