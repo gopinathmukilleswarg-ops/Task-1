@@ -1,0 +1,155 @@
+#string length
+a="Mukill"
+count=0
+for i in a:
+    count+=1
+print("len:",count)
+
+
+#alphabets check 
+
+a="Mukill"
+print(a.isalpha())
+
+
+
+#digits check 
+
+a="1234567"
+print(a.isdigit())
+
+
+#count the number 
+
+a="Mukill"
+count=0
+for i in a:
+    if i not in "aeiouAEIOU":
+        count+=1
+print("consonants :",count)
+
+
+
+#find the first 
+
+a="Mukill"
+for i in a:
+    if a.count(i)==1:
+        print(i,end="   ")
+
+
+
+#swapcase character  
+
+a="MuKiLl"
+print(a.swapcase())
+
+
+#Remove all spaces  
+
+a="Mukill is develaper"
+print(a.replace(" ",""))
+
+
+#start wiht vowels 
+
+a="apple"
+if a[0].lower()in "aeiou":
+    print("vowel")
+else:
+    print("not vowel")
+
+
+#count the character 
+
+a="apple,banana"
+print(a.count("a"))
+
+#Replace all vowels  
+
+a= "Mukill"
+for i in "aeiou":
+    a=(a.replace(i,"*"))    
+print(a)
+
+
+#even index character  
+a="Mukill"
+for i in range(0,len(a),2):
+    print(a[i])
+
+    
+#odd index character   
+    
+a="Mukill"
+for i in range(1,len(a),2):
+    print(a[i])
+
+#list of characters  
+
+a="Mukill"
+print(list(a))
+
+
+#count special character 
+
+a="Mukill@#$$"
+count=0
+for i in a:
+    if not i.isalnum():
+        count+=1
+print(count)
+
+#string contains both letter
+
+a="Mukill"
+if a.isalnum():
+    print("true")
+else:
+    print("false")
+
+#Remove leading & trailing
+
+a="    hello     "
+a1=""
+start=0
+end=len(a)-1
+while start<=end and a[start].isspace():
+    start+=1
+while  end<=start and a[end].isspace():
+    end-=1
+for i in range(start,end+1):
+    a1+=a[i]
+print(a1)
+
+#ASCII character
+a="Mukill"
+for i in a:
+    print(i,ord(i))
+
+#without split
+a=input("enter the value :")
+p=""
+for i in a:
+    b+=i
+else:
+      print(b)
+      b=""
+      print(b)
+
+#longest Word
+
+a="Mukill"
+b=a.split()
+longest=b[0]
+for i in b:
+    if len(i)>len(longest):
+        longest=i
+print(longest)
+
+
+# task 20
+
+a="Mukill"
+a1=a.isidentifier()
+print(a1)
