@@ -1,0 +1,214 @@
+# Question 1
+age = 18
+
+if age >= 18:
+    print('Eligible to Vote')
+
+
+# Question 2
+num = 10
+
+if num == 10:
+    print('Number is 10')
+
+
+# Question 3
+marks = 75
+
+if marks >= 50:
+    print('Pass')
+
+
+# Question 4
+num = -5
+
+if num > 0:
+    print('Positive')
+elif num < 0:
+    print('Negative')
+else:
+    print('Zero')
+
+
+# Question 5
+temperature = 30
+
+if temperature > 35:
+    print('Hot')
+elif temperature > 25:
+    print('Warm')
+else:
+    print('Cool')
+
+
+# Question 6
+username = 'admin'
+
+if username == 'admin':
+    print('Login Success')
+
+
+# Question 7
+number = 10
+
+if number > 5:
+    print('Greater')
+else:
+    print('Smaller')
+
+
+# Question 8
+value = 100
+
+if value > 50:
+    print('High')
+else:
+    print('Low')
+
+
+# Question 9
+for i in range(5):
+    print(i)
+
+
+# Question 10
+for i in range(1, 6):
+    print(i)
+
+
+# Question 11
+i = 1
+
+while i <= 5:
+    print(i)
+    i += 1
+
+
+# Question 12
+for i in range(5):
+    print(i)
+
+
+# Question 13
+numbers = [10, 20, 30]
+
+for num in numbers:
+    print(num)
+
+
+# Question 14
+for i in range(5):
+    print(i)
+
+
+# Question 15
+i = 1
+
+while i <= 5:
+    print(i)
+    i += 1
+
+
+# Question 16
+for i in range(1, 11):
+    if i == 5:
+        print('Found')
+
+
+# Question 17
+name = 'Python'
+
+print(name[5])
+
+
+# Question 18
+text = 'hello'
+
+print(text.upper())
+
+
+# Question 19
+message = 'Welcome'
+
+print(message.lower())
+
+
+# Question 20
+word = 'Python'
+
+word = 'J' + word[1:]
+
+print(word)
+
+
+# Question 21
+name = 'Praveen'
+
+print(name.split('e'))
+
+
+# Question 22
+text = 'Python'
+
+for i in range(len(text)):
+    print(text[i])
+
+
+# Question 23
+language = 'Python'
+
+print(language + str(100))
+
+
+# Question 24
+numbers = [10, 20, 30]
+
+print(numbers[2])
+
+
+# Question 25
+numbers = [1, 2, 3]
+
+numbers.append(4)
+
+print(numbers)
+
+
+# Question 26
+fruits = ['Apple', 'Orange']
+
+fruits.append('Banana')
+
+print(fruits)
+
+
+# Question 27
+numbers = [10, 20, 30]
+
+numbers.remove(20)
+
+print(numbers)
+
+
+# Question 28
+numbers = [10, 20, 30]
+
+print(len(numbers))
+
+
+# Question 29
+names = ['A', 'B', 'C']
+
+for i in range(len(names)):
+    print(names[i])
+
+
+# Question 30
+numbers = [10, 20, 30]
+
+total = 0
+
+for num in numbers:
+    total = total + num
+
+print(total)
